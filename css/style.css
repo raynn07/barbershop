@@ -1,6 +1,8 @@
 :root{
     --link-color: #fff;
     --heading-font-family: "Raleway", sans-serif;
+    --text-font-family: "Open Sans" , sans-serif;
+    --link-hover-color: #ff6c00;
 }
 
 .global-header{
@@ -9,11 +11,18 @@
 
 .global-header .main-vavigation a:link,
 .global-header .main-vavigation a:visited{
-    color: #fff;
+    color: var(--link-color);
+    text-decoration: none;
+    font-family: var(--text-font-family);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+
 }
 
 .global-header .main-vavigation a:hover{
-    color: #ff6c00;
+    color: var(--link-hover-color);
 }
 
 .global-header .main-vavigation a:active{
@@ -30,6 +39,40 @@ h6{
     font-weight: 700;
 }
 
+.phone-number:link,
+.phone-number:link:visited{
+    font-family: var(--heading-font-family);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.phone-number:hover{
+    color: var(--link-hover-color);
+}
+
+.button{
+    color: var(--link-color);
+    font-family: var(--text-font-family);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid var(--link-hover-color);
+    border-radius: 25px;
+    padding: 12px 25px;
+}
+
+.button:hover{
+    background-color: #fff;
+    color: var(--link-hover-color);
+    border: 1px solid #fff;
+}
 
 
 
