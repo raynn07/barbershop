@@ -96,6 +96,65 @@ h6{
     border: 1px solid #fff;
 }
 
+.prices-section{
+    background: url(../images/services-section-bg.png);
+    background-color: #111319;
+    background-repeat: no-repeat;
+    padding: 130px 55px;
+    background-size: cover;
+}
+
+.heading-with-dash{
+    display: flex;
+    align-items: center;
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.heading-with-dash h3{
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-family: var(--text-font-family);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+}
+
+.section-heading{
+    font-family: var(--heading-font-family);
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    font-size: 42px;
+    color: #fff;
+}
+
+.prices{
+    display: flex;
+    margin-top: 46px;
+}
+
+.prices-list{
+    font-family: var(--text-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: rgba(157, 164, 189, 1);
+    list-style-type: none;
+    flex-grow: 1;
+}
+
+.prices-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.prices-list li .prices-dash{
+    height: 1px;
+    background-color: rgba(157, 164, 189, 0.12);
+}
 
 
 
