@@ -4,36 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BarberShop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="global-header">
       <a href="./index.html">
-        <img src="./images/Logo.svg" alt="Logo BarberShop" />
+        <img src="./images/logo.svg" alt="Logo BarberShop" />
       </a>
+
       <div class="nav-container">
-        <nav class="main-vavigation">
-          <ul><!--container-->
-            <li><a href="./about.html">About</a></li> <!--item-->
-            <li><a href="#">Services and Prices</a></li><!--item-->
-            <li><a href="#">Barbers</a></li><!--item-->
-            <li><a href="#">Contacts</a></li><!--item-->
+        <nav class="main-navigation">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Services and Prices</a></li>
+            <li><a href="#">Barbers</a></li>
+            <li><a href="#">Contacts</a></li>
           </ul>
         </nav>
+
         <div class="contact-container">
-          <a href="tel:+38 044 111 11 11" class="phone-number">+38 044 111 11 11</a>
-        <button type="button" class="button">Book a Service</button>
+          <a href="tel:+380441111111" class="phone-number">+38 044 111 11 11</a>
+          <button type="button" class="button">Book a Service</button>
         </div>
       </div>
+
       <section>
-        <a href="https://www.youtube.com" target="_blank">Youtube</a>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <img src="./images/vertical-dash.svg" alt="vertical dash" />
+        <a href="https://www.youtube.com" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <img src="./images/vertical-dash.svg" alt="Vertical Dash" />
       </section>
     </header>
+
     <main>
       <section>
         <hr />
@@ -45,19 +57,25 @@
         </p>
       </section>
 
-      <!-- About section -->
+      <!-- About Section -->
       <section>
         <div>
-          <img src="./images/barber-img-1.png" alt="Frizer pune spuma de ras" />
+          <img
+            src="./images/barber-img-1.png"
+            alt="Frizer pune spuma de ras"
+            width="100px"
+          />
           <img
             src="./images/barber-img-2.png"
             alt="Frizer barbiereste cu briceag"
           />
         </div>
+
         <div>
-          <img src="./images/horizontal-dash.svg" alt="horizontal dash" />
+          <img src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
           <span>About</span>
         </div>
+
         <h2>The Best Barbershop in Your City</h2>
         <h3>
           If you want to add more confidence to your image, you are definitely
@@ -70,13 +88,15 @@
           clients. Therefore, we are always ready to improve everyone who comes
           to us!
         </p>
+
         <button class="button">Book a Service</button>
       </section>
-       <!-- Services and Prices Section -->
-      <section id="services" class="prices-section">
+
+      <!-- Services and Prices Section -->
+      <section id="services" class="section prices-section">
         <div class="section-description">
           <div class="heading-with-dash">
-            <img src="./images/horizontal-dash.svg" alt="horizontal dash" />
+            <img src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
             <h3>Spend time in the company of the best craftsmen</h3>
           </div>
           <h2 class="section-heading">Services and Prices</h2>
@@ -91,41 +111,50 @@
             </li>
             <li>
               <span>Beard Trim</span>
+              <span class="prices-dash"></span>
               <span>from 200 UAH</span>
             </li>
             <li>
               <span>Mustache Trim</span>
+              <span class="prices-dash"></span>
               <span>from 200 UAH</span>
             </li>
             <li>
               <span>Straight Razor Shave</span>
+              <span class="prices-dash"></span>
               <span>from 200 UAH</span>
             </li>
           </ul>
-  
+
           <ul class="prices-list">
             <li>
               <span>Trainee Haircut</span>
+              <span class="prices-dash"></span>
               <span>from 50 UAH</span>
             </li>
             <li>
               <span>Buzz Cut</span>
-              <span>from 300 UAH</span>
+              <span class="prices-dash"></span>
+              <span>from 200 UAH</span>
             </li>
             <li>
               <span>Kids Haircut (&lt;12 y.o.)</span>
+              <span class="prices-dash"></span>
               <span>from 300 UAH</span>
             </li>
             <li>
               <span>Gray Coverage</span>
+              <span class="prices-dash"></span>
               <span>from 200 UAH</span>
             </li>
           </ul>
         </div>
-        
 
-        <button class="button">Book a Service</button>
+        <div class="centered-container">
+          <button class="button">Book a Service</button>
+        </div>
       </section>
+
       <!-- Old School Section -->
       <section>
         <ul>
@@ -142,7 +171,7 @@
           <li>
             <span>20</span>
             <sup>+</sup>
-            <span>The Best Barbers of Kyiv</span>
+            <span>The Best Barbersof Kyiv</span>
           </li>
           <li>
             <span>100</span>
@@ -150,23 +179,29 @@
             <span>Gifts for Regular Customers</span>
           </li>
         </ul>
+
         <article>
-          <img src="./images/horizontal-dash.svg" alt="horizontal dash" />
-          <h3>Old School</h3>
+          <img src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
+          <h3>Old school</h3>
           <h2>Why do they come to us?</h2>
-          <p>Only good things are said about us. But it is better to see and feel 1 time than to read 10 times.</p>
+          <p>
+            Only good things are said about us. But it is better to see and feel
+            1 time than to read 10 times.
+          </p>
         </article>
       </section>
-      <!-- For true connoisseurs of the atmosphere -->
+
+      <!-- For true connoisseurs of the atmosphere Section -->
       <section>
-        <img src="./images/horizontal-dash.svg" alt="horizontal dash" />
+        <img src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
         <h3>for true connoisseurs of the atmosphere</h3>
         <h2>Our Barbers</h2>
-        <img src="./images/barber_john_smith.png" alt="John Smith">
-        <br/>
+
+        <img src="images/barber_john_smith.png" alt="John Smith" />
+        <br />
         <span>John Smith</span>
-        <br/>
-        <span>Extreme Barber</span> 
+        <br />
+        <span>Extreme Barber</span>
       </section>
     </main>
   </body>
