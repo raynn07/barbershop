@@ -187,4 +187,35 @@
     margin-right: 6px;
   }
 
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.modal-content{
+  background-color: white;
+  padding: 20px;
+  width: 90%;
+}
+
+.is-hidden{
+  visibility: hidden;
+}
+
+.close-btn{
+  background-color: red;
+  border: 1px solid red;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
