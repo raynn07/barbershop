@@ -4,19 +4,52 @@
   --text-font-family: "Open Sans", sans-serif;
   --link-hover-color: #ff6c00;
   --heading-alternative-color: #303030;
-  --transition: 250ms;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --icon-normal-size: 18px;
 }
 
 .global-header {
   background-color: #333333;
   display: flex;
+  height: 680px;
 }
 
-.nav-container {
+.global-header section{
+  width: 100%;
+}
+
+.global-header aside{
+  display: none;
+}
+
+.global-header aside .social-media{
   display: flex;
-  width: 80%;
-  align-items: center;
-  justify-content: space-between;
+}
+
+.global-header .logo-mobile{
+  position: absolute;
+  top: 40px;
+  left: 31px;
+}
+
+.global-header a svg{
+  width: 70px;
+  height: 70px;
+}
+
+.nav-container{
+  display: none;
+}
+
+.menu-button{
+  position: absolute;
+  right: 40px;
+  right: 40px;
+}
+
+.menu-button svg{
+  width: 40px;
+  height: 40px;
 }
 
 .global-header .main-navigation ul {
@@ -67,7 +100,6 @@ h6 {
   font-weight: 700;
 }
 
-
 .centered-container {
   display: flex;
   justify-content: center;
@@ -100,13 +132,14 @@ h6 {
   border-radius: 25px;
   padding: 12px 25px;
   cursor: pointer;
+  transition: background-color var(--transition), color var(--transition),
+    border var(--transition);
 }
 
 .button:hover {
   background-color: #fff;
   color: #ff6c00;
   border: 1px solid #fff;
-  transition: border var(--transition) , color var(--transition) , background-color var(--transition);
 }
 
 .section-dark button {
@@ -190,8 +223,11 @@ h6 {
 }
 
 .prices {
-  display: flex;
-  margin: 50px 0;
+  display: none;
+}
+
+.prices-mobile{
+  margin: 50px 0px;
 }
 
 .prices-list {
@@ -205,6 +241,7 @@ h6 {
   list-style: none;
   flex-grow: 1;
   background-image: linear-gradient(rgba(23, 26, 36, 1), rgba(23, 26, 36, 0.2));
+  transition: background-image 3s;
 }
 
 .prices-list:hover {
@@ -242,13 +279,15 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .modal-content {
   background-color: #fff;
-  padding: 20px;
-  width: 90%;
+  padding: 40px;
+  width: 528px;
+  height: 581px;
+  position: relative;
 }
 
 .is-hidden {
@@ -256,11 +295,203 @@ h6 {
 }
 
 .close-btn {
-  background-color: #ff0000;
-  border: 1px solid #ff0000;
-  color: #fff;
+  box-sizing: content-box;
+  width: var(--icon-normal-size);
+  height: var(--icon-normal-size);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 6px;
   cursor: pointer;
   position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.input-container svg {
+  width: var(--icon-normal-size);
+  height: var(--icon-normal-size);
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 12px;
+}
+
+.textfield {
+  height: 40px;
+  padding: 11px 12px 11px 42px;
+}
+
+textarea {
+  height: 120px;
+  padding: 12px 16px;
+}
+
+textarea::placeholder {
+  font-family: var(--text-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.textfield,
+textarea {
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+}
+
+.textfield:focus,
+textarea:focus {
+  border: 1px solid rgba(33, 150, 243, 1);
+}
+
+.textfield:focus + svg {
+  fill: rgba(33, 150, 243, 1);
+}
+
+.form-label {
+  font-family: var(--text-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 1);
+}
+
+.terms-and-conditions-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.terms-and-conditions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.terms-and-conditions span {
+  font-family: var(--text-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.terms-and-conditions span a {
+  color: #2196f3;
+}
+
+.terms-and-conditions-label svg {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: calc(50% - 7.5px);
+  left: 0;
+}
+
+.terms-and-conditions-check:not(:checked) {
+  visibility: hidden;
+}
+
+.terms-and-conditions-check:checked + label > svg {
+  display: none;
+}
+
+.js-menu-container{
+  display: none;
+}
+
+.js-menu-container.is-open{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   top: 0;
   right: 0;
+  background-color: white;
+  height: 100%;
+  width: 337px;
+  padding: 48px 40px;
+  z-index: 1;
+}
+
+.js-menu-container .js-close-menu{
+  border: none;
+  background:none;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 30px;
+}
+
+.js-menu-container .js-close-menu svg{
+  width: 40px;
+  height: 40px;
+}
+
+.menu-drawer-navigation{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px){
+  .global-header aside{
+    display: block;
+    width: 155px;
+    background-color: white;
+  }
+  .global-header .logo-mobile{
+    display: none;
+  }
+  .global-header a svg{
+    width: 70px;
+    margin-left: 55px;
+    margin-top: 32px;
+  }
+  
+
+}
+
+@media screen  and (min-width: 1158px){
+  .menu-button{
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .prices-list-mobile{
+    display: none;
+  }
+  .mobile{
+    display: none;
+  }
+  
+  .prices {
+    display: flex;
+    margin: 50px 0;
+  }
+  .prices-mobile{
+    display: none;
+  }
+
 }
